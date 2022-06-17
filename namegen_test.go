@@ -13,19 +13,7 @@ func TestGeneratOneEmpty(t *testing.T) {
     }
 }
 
-// Calling GenerateOne with a separator that appears in one of the lists should return an error
-
-
-// Calling GenerateOne with a separator which is not allowed should return an error
-// func TestGeneratOneEmpty(t *testing.T) {
-// 	name, err:= GenerateOne()
-//     if name != "" || err == nil {
-//         t.Fatalf(`GenerateOne("") = %q, %v, want "", error`, msg, err)
-//     }
-// }
-
-
-// Calling GenerateOne with proper lists but without separator should return 2 strings separated per the default separator
+// Calling GenerateOne with proper lists should return 2 strings separated per the default separator
 // Example: awesome-wonderwoman
 func TestGenerateOne(t *testing.T) {
 	list1:= []string{"awesome", "funny", "scary"}
@@ -42,9 +30,3 @@ func TestGenerateOne(t *testing.T) {
 
 // Calling GenerateOne with prefix should return the prefix string, 1 separator, the first string, 1 other separator, the last string
 // Example: 20220616-awesome-wonderwoman
-
-// Calling GenerateOne with suffix should return the first string, 1 separator, the last string, another separator, the suffix
-// Example: awesome-wonderwoman-1
-
-// Calling GenerateOne with suffix and prefix should return the the prefix string, 1 separator, the first string, 1 separator, the last string, another separator, the suffix
-// Example: 20220616-awesome-wonderwoman-1
